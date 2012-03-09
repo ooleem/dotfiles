@@ -1,0 +1,22 @@
+[alias]
+  co = checkout
+  graph = log --graph --date-order -C -M --pretty=format:\"<%h> %ad [%an] %Cgreen%d%Creset %s\" --all --date=short
+
+[diff]
+	tool = vimdiff
+[difftool]
+	prompt = false
+
+[merge]
+	tool = vimdiff
+	conflictstyle = diff3
+[mergetool]
+  prompt = false
+
+[color]
+  diff = auto
+  show = auto
+  log = auto
+  status = auto
+  branch = auto
+  interactive = true
