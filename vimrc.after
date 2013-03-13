@@ -1,4 +1,0 @@
-set wrap
-color desert
-set showcmd
-iunmap <C-t>

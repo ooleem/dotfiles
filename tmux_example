@@ -1,9 +1,0 @@
-tmux new    -d -s project -n vim       'cd Projects/project;vim;zsh'
-tmux neww   -d -t project -n shell     'cd Projects/project;zsh'
-tmux neww   -d -t project -n shell     'cd Projects/project;zsh'
-tmux neww   -d -t project -n rails     'cd Projects/project;rails s'
-tmux neww   -d -t project -n solr_dev  'cd Projects/project;bundle exec thor solr:run_solr 8982'
-tmux neww   -d -t project -n solr_test 'cd Projects/project;bundle exec thor solr:run_solr 8981'
-tmux neww   -d -t project -n jasmine   'cd Projects/project;bundle exec rake jasmine'
-tmux neww   -d -t project -n guard     'cd Projects/project;bundle exec guard -G Guard_norspec'
-tmux attach -t project
