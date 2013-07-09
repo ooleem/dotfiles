@@ -81,12 +81,14 @@ silent! map <unique> <Leader>w :!bundle exec cucumber --profile=wip<CR>
 set shell=/bin/sh
 
 set pastetoggle=<F2>
+
+vnoremap <leader><leader> Commentary
 " }
 
 " sudo write
 cmap w!! %!sudo tee > /dev/null %
 
-" Custom functions {
+" Search {
 function! VisualSelection()
   try
     let a_save = @a
@@ -98,7 +100,7 @@ function! VisualSelection()
 endfunction
 
 function! SearchProjectForSelect()
-  exec ":Ack \"" . VisualSelection() . "\""
+  exec ":Ag \"" . VisualSelection() . "\""
 endfunction
 
 map <leader>s :call SearchProjectForSelect()<cr>
@@ -115,7 +117,7 @@ Bundle 'gmarik/vundle'
 " Plugins {
 Bundle "tpope/vim-fugitive"
 Bundle "ervandew/supertab"
-Bundle "mileszs/ack.vim"
+Bundle "rking/ag.vim"
 
 " Navigation
 Bundle "kien/ctrlp.vim"
