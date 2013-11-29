@@ -118,6 +118,8 @@ Bundle 'gmarik/vundle'
 Bundle "tpope/vim-fugitive"
 Bundle "ervandew/supertab"
 Bundle "rking/ag.vim"
+Bundle 'rizzatti/funcoo.vim'
+Bundle 'rizzatti/dash.vim'
 
 " Navigation
 Bundle "kien/ctrlp.vim"
