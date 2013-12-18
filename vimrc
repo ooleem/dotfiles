@@ -149,6 +149,7 @@ Bundle "alfredodeza/jacinto.vim"
 Bundle "Rykka/colorv.vim"
 Bundle "godlygeek/tabular"
 Bundle "vim-scripts/AutoTag"
+Bundle "vim-scripts/ZoomWin"
 
 " Vroom
 Bundle "skalnik/vim-vroom"
