@@ -154,20 +154,24 @@ Plugin 'vim-scripts/ZoomWin'
 
 " Vroom
 Plugin 'skalnik/vim-vroom'
-let g:vroom_map_keys = 0
-map <leader>t :VroomRunTestFile<cr>
-map <leader>T :VroomRunNearestTest<cr>
 
 " Colorscheme
 Plugin 'altercation/vim-colors-solarized'
-let g:solarized_termcolors=256
-set background=dark
-colorscheme solarized
 " }
 
 call vundle#end()
 filetype plugin indent on   " required!
 " }
+
+" Vroom
+let g:vroom_map_keys = 0
+map <leader>t :VroomRunTestFile<cr>
+map <leader>T :VroomRunNearestTest<cr>
+
+" Colorscheme
+let g:solarized_termcolors=256
+set background=dark
+colorscheme solarized
 
 " Highlight extra white spaces
 highlight ExtraWhitespace ctermbg=red guibg=red
