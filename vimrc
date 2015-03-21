@@ -111,60 +111,61 @@ map <leader>s :call SearchProjectForSelect()<cr>
 filetype off                " required!
 
 " Setup Vundle
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
-Bundle 'gmarik/vundle'
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+Plugin 'gmarik/vundle'
 
 " Plugins {
-Bundle "tpope/vim-fugitive"
-Bundle "ervandew/supertab"
-Bundle "rking/ag.vim"
-Bundle 'rizzatti/funcoo.vim'
-Bundle 'rizzatti/dash.vim'
+Plugin 'tpope/vim-fugitive'
+Plugin 'ervandew/supertab'
+Plugin 'rking/ag.vim'
+Plugin 'rizzatti/funcoo.vim'
+Plugin 'rizzatti/dash.vim'
 
 " Navigation
-Bundle "kien/ctrlp.vim"
-Bundle "scrooloose/nerdtree"
+Plugin 'kien/ctrlp.vim'
+Plugin 'scrooloose/nerdtree'
 
 " Programming
-Bundle "groenewege/vim-less"
-Bundle "kchmck/vim-coffee-script"
-Bundle "nono/vim-handlebars"
-Bundle "slim-template/vim-slim"
-Bundle "tpope/vim-commentary"
-Bundle "tpope/vim-endwise"
-Bundle "tpope/vim-markdown"
-Bundle "tpope/vim-rails"
-Bundle "vim-ruby/vim-ruby"
-Bundle "leshill/vim-json"
-Bundle "pangloss/vim-javascript"
-Bundle "tpope/vim-rake"
-Bundle "tpope/vim-haml"
-Bundle "tpope/vim-repeat"
-Bundle "vim-scripts/matchit.zip"
-Bundle "othree/html5.vim"
-Bundle "tpope/vim-bundler"
-Bundle "alfredodeza/jacinto.vim"
+Plugin 'groenewege/vim-less'
+Plugin 'kchmck/vim-coffee-script'
+Plugin 'nono/vim-handlebars'
+Plugin 'slim-template/vim-slim'
+Plugin 'tpope/vim-commentary'
+Plugin 'tpope/vim-endwise'
+Plugin 'tpope/vim-markdown'
+Plugin 'tpope/vim-rails'
+Plugin 'vim-ruby/vim-ruby'
+Plugin 'leshill/vim-json'
+Plugin 'pangloss/vim-javascript'
+Plugin 'tpope/vim-rake'
+Plugin 'tpope/vim-haml'
+Plugin 'tpope/vim-repeat'
+Plugin 'vim-scripts/matchit.zip'
+Plugin 'othree/html5.vim'
+Plugin 'tpope/vim-bundler'
+Plugin 'alfredodeza/jacinto.vim'
 
 " Utility"
-Bundle "Rykka/colorv.vim"
-Bundle "godlygeek/tabular"
-Bundle "vim-scripts/AutoTag"
-Bundle "vim-scripts/ZoomWin"
+Plugin 'Rykka/colorv.vim'
+Plugin 'godlygeek/tabular'
+Plugin 'vim-scripts/AutoTag'
+Plugin 'vim-scripts/ZoomWin'
 
 " Vroom
-Bundle "skalnik/vim-vroom"
+Plugin 'skalnik/vim-vroom'
 let g:vroom_map_keys = 0
 map <leader>t :VroomRunTestFile<cr>
 map <leader>T :VroomRunNearestTest<cr>
 
 " Colorscheme
-Bundle "altercation/vim-colors-solarized"
+Plugin 'altercation/vim-colors-solarized'
 let g:solarized_termcolors=256
 set background=dark
 colorscheme solarized
 " }
 
+call vundle#end()
 filetype plugin indent on   " required!
 " }
 
@@ -176,4 +177,3 @@ autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
 autocmd InsertLeave * match ExtraWhitespace /\s\+$/
 autocmd BufWinLeave * call clearmatches()
 " }
-
