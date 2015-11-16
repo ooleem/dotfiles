@@ -156,7 +156,7 @@ Plugin 'vim-scripts/ZoomWin'
 Plugin 'skalnik/vim-vroom'
 
 " Ag
-let g:ag_prg="ag --column --nogroup
+let g:ag_prg="ag --column --nogroup"
 
 " Colorscheme
 Plugin 'altercation/vim-colors-solarized'
