@@ -9,7 +9,7 @@ set clipboard+=unnamed    " Yanks go on clipboard instead.
 " Backup
 set nowritebackup
 set nobackup
-set directory=/tmp//      " prepend(^=) $HOME/.tmp/ to default path; use full path as backup filename(//)
+set directory=/tmp//      " prepend(^=) $HOME/.tmp/ toA default path; use full path as backup filename(//)
 
 set hidden                " The current buffer can be put to the background without writing to disk
 
@@ -101,7 +101,7 @@ function! VisualSelection()
 endfunction
 
 function! SearchProjectForSelect()
-  exec ":Ag \"" . VisualSelection() . "\""
+  exec ":Ag! \"" . VisualSelection() . "\""
 endfunction
 
 map <leader>s :call SearchProjectForSelect()<cr>
