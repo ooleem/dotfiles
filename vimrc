@@ -151,6 +151,7 @@ Plugin 'Rykka/colorv.vim'
 Plugin 'godlygeek/tabular'
 Plugin 'vim-scripts/AutoTag'
 Plugin 'vim-scripts/ZoomWin'
+Plugin 'benmills/vimux'
 
 " Vroom
 Plugin 'skalnik/vim-vroom'
@@ -170,6 +171,13 @@ filetype plugin indent on   " required!
 let g:vroom_map_keys = 0
 map <leader>t :VroomRunTestFile<cr>
 map <leader>T :VroomRunNearestTest<cr>
+
+" Vimux                                                                                                                                                                                                                                  
+map <Leader>vz :VimuxZoomRunner<CR>                                                                                                                                                                                                      
+map <Leader>vq :VimuxCloseRunner<CR> 
+
+" vim-json                                                                                                                                                                                                                               
+let g:vim_json_syntax_conceal = 0
 
 " Colorscheme
 let g:solarized_termcolors=256
