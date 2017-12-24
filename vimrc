@@ -15,7 +15,7 @@ set hidden                " The current buffer can be put to the background with
 
 set hlsearch              " highlight search
 set ignorecase            " Do case in sensitive matching with
-set smartcase		          " be sensitive when there's a capital letter
+set smartcase             " be sensitive when there's a capital letter
 set incsearch
 " }
 
@@ -25,7 +25,7 @@ set fo-=r " Do not automatically insert a comment leader after an enter
 set fo-=t " Do no auto-wrap text using textwidth (does not apply to comments)
 
 set wrap
-set textwidth=0		        " Don't wrap lines by default
+set textwidth=0           " Don't wrap lines by default
 
 set backspace=indent,eol,start " more powerful backspacing
 
@@ -77,13 +77,15 @@ vnoremap <leader>p "_dP
 
 " Run cucumber {
 silent! map <unique> <Leader>w :!bundle exec cucumber --profile=wip<CR>
+nmap <Leader>r :!ruby %<CR>
 
 " Fix for rvm
 set shell=/bin/sh
 
 set pastetoggle=<F2>
 
-vnoremap <leader><leader> Commentary
+vnoremap \\ :Commentary<CR>
+nmap \\ :Commentary<CR>
 " }
 
 " sudo write
@@ -113,9 +115,9 @@ filetype off                " required!
 " Setup Vundle
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
-Plugin 'gmarik/vundle'
 
 " Plugins {
+Plugin 'VundleVim/Vundle.vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'ervandew/supertab'
 Plugin 'rking/ag.vim'
@@ -127,6 +129,7 @@ Plugin 'kien/ctrlp.vim'
 Plugin 'scrooloose/nerdtree'
 
 " Programming
+
 Plugin 'groenewege/vim-less'
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'nono/vim-handlebars'
@@ -139,25 +142,22 @@ Plugin 'vim-ruby/vim-ruby'
 Plugin 'leshill/vim-json'
 Plugin 'pangloss/vim-javascript'
 Plugin 'tpope/vim-rake'
-Plugin 'tpope/vim-haml'
 Plugin 'tpope/vim-repeat'
 Plugin 'vim-scripts/matchit.zip'
 Plugin 'othree/html5.vim'
 Plugin 'tpope/vim-bundler'
 Plugin 'alfredodeza/jacinto.vim'
+Plugin 'elixir-lang/vim-elixir'
 
 " Utility"
 Plugin 'Rykka/colorv.vim'
-Plugin 'godlygeek/tabular'
 Plugin 'vim-scripts/AutoTag'
 Plugin 'vim-scripts/ZoomWin'
 Plugin 'benmills/vimux'
+Plugin 'airblade/vim-gitgutter'
 
 " Vroom
 Plugin 'skalnik/vim-vroom'
-
-" Ag
-let g:ag_prg="ag --column --nogroup"
 
 " Colorscheme
 Plugin 'altercation/vim-colors-solarized'
@@ -165,18 +165,21 @@ Plugin 'altercation/vim-colors-solarized'
 
 call vundle#end()
 filetype plugin indent on   " required!
-" }
+
+" Ag
+let g:ag_prg="ag --column --nogroup"
+
 
 " Vroom
 let g:vroom_map_keys = 0
 map <leader>t :VroomRunTestFile<cr>
 map <leader>T :VroomRunNearestTest<cr>
 
-" Vimux                                                                                                                                                                                                                                  
-map <Leader>vz :VimuxZoomRunner<CR>                                                                                                                                                                                                      
-map <Leader>vq :VimuxCloseRunner<CR> 
+" Vimux
+map <Leader>vz :VimuxZoomRunner<CR>
+map <Leader>vq :VimuxCloseRunner<CR>
 
-" vim-json                                                                                                                                                                                                                               
+" vim-json
 let g:vim_json_syntax_conceal = 0
 
 " Colorscheme
