@@ -71,6 +71,9 @@ nnoremap <c-j> <c-w>j
 nnoremap <c-k> <c-w>k
 nnoremap <c-h> <c-w>h
 nnoremap <c-l> <c-w>l
+nnoremap <Tab> gt
+nnoremap <S-Tab> gT
+nnoremap <c-t> :tabnew<cr>
 
 " Keep content after pasting
 vnoremap <leader>p "_dP
