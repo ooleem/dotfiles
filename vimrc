@@ -87,6 +87,8 @@ set shell=/bin/sh
 
 set pastetoggle=<F2>
 
+nmap <F3> :%s/ \+$//g<CR>
+
 vnoremap \\ :Commentary<CR>
 nmap \\ :Commentary<CR>
 " }
@@ -151,13 +153,21 @@ Plugin 'othree/html5.vim'
 Plugin 'tpope/vim-bundler'
 Plugin 'alfredodeza/jacinto.vim'
 Plugin 'elixir-lang/vim-elixir'
+Plugin 'posva/vim-vue'
+Plugin 'bumaociyuan/vim-swift'
+Plugin 'rhysd/vim-crystal'
+Plugin 'nikvdp/ejs-syntax'
+" inky
+Plugin 'M4R7iNP/vim-inky'
 
 " Utility"
 Plugin 'Rykka/colorv.vim'
 Plugin 'vim-scripts/AutoTag'
 Plugin 'vim-scripts/ZoomWin'
 Plugin 'benmills/vimux'
-Plugin 'airblade/vim-gitgutter'
+" Plugin 'airblade/vim-gitgutter'
+Plugin 'dhruvasagar/vim-table-mode'
+Plugin 'tpope/vim-dadbod'
 
 " Vroom
 Plugin 'skalnik/vim-vroom'
@@ -185,10 +195,18 @@ map <Leader>vq :VimuxCloseRunner<CR>
 " vim-json
 let g:vim_json_syntax_conceal = 0
 
+" vim-table-mode
+let g:table_mode_header_fillchar='='
+
 " Colorscheme
 let g:solarized_termcolors=256
 set background=dark
 colorscheme solarized
+
+" Highlit tabs
+highlight SpecialKey ctermfg=1
+set list
+set listchars=tab:··
 
 " Highlight extra white spaces
 highlight ExtraWhitespace ctermbg=red guibg=red
@@ -198,3 +216,10 @@ autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
 autocmd InsertLeave * match ExtraWhitespace /\s\+$/
 autocmd BufWinLeave * call clearmatches()
 " }
+
+" set swap
+set directory^=$HOME/.vim/tmp//
+
+"CtrlP
+let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
+
